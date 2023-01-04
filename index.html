@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Lesson 23 JS</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230104191326">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">
+					HOMEWORK LESSON №23
+				</h1>
+				<h2 class="header__subtitle">
+					JAVASCRIPT
+				</h2>
+			</div>
+		</header>
+		<main class="page">
+			<section class="operators">
+				<div class="operators__container">
+					<h3 class="operators__title title">
+						Операторы JAVASCRIPT. "2"+2=22.
+					</h3>
+					<div class="operators__image">
+						<picture><source srcset="img/operators.webp" type="image/webp"><img src="img/operators.jpg" alt="Image"></picture>
+					</div>
+					<div class="operators__option option">
+						<h3 class="option__title">
+							Вариант №1
+						</h3>
+						<p>
+							console.log('35'+ - '22');
+						</p>
+						<p>
+							<span>
+								Вариант 1 - написан не верно, так как оператор + не преобразовывает типы данных в число, а складывает
+								текущие типы данных. Результат 35-22
+							</span>
+						</p>
+					</div>
+					<div class="operators__option option">
+						<h3 class="option__title">
+							Вариант №2
+						</h3>
+						<p>
+							console.log('35' * '22');
+						</p>
+						<p>
+							Вариант 2 - написан верно, строки будут преобразованы в числа и умножены друг на друга.
+						</p>
+					</div>
+					<div class="operators__option option">
+						<h3 class="option__title">
+							Вариант №3
+						</h3>
+						<p>
+							console.log('558' > 22++);
+						</p>
+						<p>
+							<span>
+								Вариант 3 - написан не верно, вернет ошибку, так как инкремент можно использовать только с переменными.
+							</span>
+						</p>
+					</div>
+					<div class="operators__option option">
+						<h3 class="option__title">
+							Вариант №4
+						</h3>
+						<p>
+							let usersCounter = 0; <br>
+							let newUsers = usersCounter++; <br>
+							console.log(newUsers);
+						</p>
+						<p>
+							<span>
+								Вариант 4 - написан не верно, так как инкремент должен быть записан в префиксной форме. Результат будет
+								0
+							</span>
+						</p>
+					</div>
+					<div class="operators__option option">
+						<h3 class="option__title">
+							Вариант №5
+						</h3>
+						<p>
+							let usersCounter = 0; <br>
+							let newUsers = usersCounter++; <br>
+							console.log(newUsers);
+						</p>
+						<p>
+							<span>
+								Вариант 5 - написан не верно, так как оператор ! вернет true и в первом и втором варианте, следующими
+								сработаетают амперсанты && и выведут значение 11.
+							</span>
+						</p>
+					</div>
+					<div class="operators__option option">
+						<h3 class="option__title">
+							Вариант №6
+						</h3>
+						<p>
+							let name = 0; <br>
+							console.log(name ?? "Без имени")
+						</p>
+						<p>
+							<span>
+								Вариант 6 - написан не верно, так как первый оперант не null или undefined и возвращает значение первого
+								операнта со значением 0.
+							</span>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="if-else">
+				<div class="if-else__container">
+					<h3 class="if-else__title title">
+						IF ELSE в JAVASCRIPT. Условный оператор "?". Примеры IF ELSE.
+					</h3>
+					<div class="if-else__image">
+						<picture><source srcset="img/if-else.webp" type="image/webp"><img src="img/if-else.jpg" alt="Image"></picture>
+					</div>
+					<div class="if-else__option option">
+						<h3 class="option__title">
+							Вариант №1
+						</h3>
+						<p>
+							if (1==="1") { <br>
+							console.log('Истина!'); <br>
+							} else { <br>
+							console.log('Ложь!');
+							}
+						</p>
+						<p>
+							<span>
+								Вариант 1 - выведет строку ложь! так как строгое уравнение не сравнивает разные типы данных.
+							</span>
+						</p>
+					</div>
+					<div class="if-else__option option">
+						<h3 class="option__title">
+							Вариант №2
+						</h3>
+						<p>
+							if (5 == "5") { <br>
+							console.log('Истина!'); <br>
+							} else { <br>
+							console.log('Ложь!');
+							}
+						</p>
+						<p>
+							Вариант 2 - выведет строку Истина! так как не строгое уравнение сравнивает разные типы данных.
+						</p>
+					</div>
+					<div class="if-else__option option">
+						<h3 class="option__title">
+							Вариант №3
+						</h3>
+						<p>
+							let message = (92 > '11' && 58 < 100) ? 'Истина!' : 'Ложь!' ; <br>
+								console.log('message');
+						</p>
+						<p>
+							Вариант 3 - выведет строку Истина! Так как в обеих вариантах выведиться true
+						</p>
+					</div>
+					<div class="if-else__option option">
+						<h3 class="option__title">
+							Вариант №4
+						</h3>
+						<p>
+							if (0) { <br>
+							console.log('Ложь!'); <br>
+							} else if (" ") { <br>
+							console.log('Истина!');
+							}
+						</p>
+						<p>
+							Вариант 4 - выведет строку Истина! так как первый if вывел false, то else if с пробелом в кавычках вывел
+							true
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="cycles">
+				<div class="cycles__container">
+					<h3 class="cycles__title title">
+						Циклы FOR и WHILE в JavaScript. Директивы break и continue.
+					</h3>
+					<div class="cycles__image">
+						<picture><source srcset="img/cycles.webp" type="image/webp"><img src="img/cycles.jpg" alt="Image"></picture>
+					</div>
+					<div class="cycles__option option">
+						<h3 class="option__title">
+							Задача №1
+						</h3>
+						<div class="option__task">
+							<p>
+								let num = 0; <br>
+								while (num < 6) { <br>
+									console.log(num); <br>
+									num++; <br>
+									}
+							</p>
+							<p>
+								let num = 0; <br>
+								do { <br>
+								console.log(num); <br>
+								num++; <br>
+								} while (num < 5); </p>
+									<p>
+										for (let num = 0; num < 6; num++) { <br>
+											console.log(num);
+									</p>
+									<p>
+										firstFor:for(let num = 0; num < 8; num++) { <br>
+											for (let size = 0; size < 9; size++) { <br>
+												if (size == 6) { <br>
+												break firstFor <br>
+												} <br>
+												console.log(size); <br>
+												}
+												}
+									</p>
+						</div>
+						<p>
+							<span>
+								Задача 1 - в каждом цикле выводиться число 5
+							</span>
+						</p>
+					</div>
+					<div class="cycles__option option">
+						<h3 class="option__title">
+							Задача №2
+						</h3>
+						<p>
+							let num = 8;
+							while (num) {
+							console.log(num);
+							num--;
+							}
+						</p>
+						<p>
+							<span>
+								Задача 2 - не верно, в последнем цикле выводиться число 1.
+							</span>
+						</p>
+					</div>
+					<div class="cycles__option option">
+						<h3 class="option__title">
+							Задача №3
+						</h3>
+						<p>
+							for (let num = 0; num < 3; num++) {<br>
+								console.log(`Число: ${num}`); <br>
+								}
+						</p>
+						<p>
+							<span>
+								Задача 3 - перевод на while. <br>
+							</span>
+							let num = 0; <br>
+							while (num < 3) { <br>
+								console.log(`Число: ${num}`); <br>
+								num++; <br>
+								}
+						</p>
+					</div>
+					<div class="cycles__option option">
+						<h3 class="option__title">
+							Задача №4
+						</h3>
+						<p>
+							firstFor: for (let num = 0; num < 2; num++) { <br>
+								for (let size = 0; size < 3; size++) { <br>
+									if (size == 1) { <br>
+									break firstFor <br>
+									} <br>
+									console.log(size); <br>
+									}
+									}
+						</p>
+						<p>
+							<span>
+								Задача 4 - прекращение работы на цикле 1.
+							</span>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="numbers">
+				<div class="numbers__container">
+					<h3 class="numbers__title title">
+						Числа в JAVASCRIPT. Тип данных number. Работа с числами. Проблема неточных вычислений.
+					</h3>
+					<div class="numbers__image">
+						<picture><source srcset="img/numbers.webp" type="image/webp"><img src="img/numbers.jpg" alt="Image"></picture>
+					</div>
+					<div class="numbers__option option">
+						<h3 class="option__title">
+							Задача №1
+						</h3>
+						<p>
+							let numOne = Math.round((1.005 + Number.EPSILON) * 100) / 100; <br>
+							console.log(numOne);
+						</p>
+						<p>
+							<span>
+								Задача 1 - верное значение при округлении.
+							</span>
+						</p>
+					</div>
+					<div class="numbers__option option">
+						<h3 class="option__title">
+							Задача №2
+						</h3>
+						<p>
+							let value = parseFloat("135.58px"); <br>
+							console.log(value);
+						</p>
+						<p>
+							<span>
+								Задача 2 - значение parseFloat выведет число 135.58
+							</span>
+						</p>
+					</div>
+					<div class="numbers__option option">
+						<h3 class="option__title">
+							Задача №3
+						</h3>
+						<p>
+							let value = 58 + "Фрилансер"; <br>
+							if (isNaN(value)) { <br>
+							console.log("Результат выражения NaN"); <br>
+							}
+						</p>
+						<p>
+							<span>
+								Задача 3 - проверка isNaN выведет нужное значение.
+							</span>
+						</p>
+					</div>
+					<div class="numbers__option option">
+						<h3 class="option__title">
+							Задача №4
+						</h3>
+						<p>
+							console.log(Math.max(10, 58, 39 -150, 0));
+						</p>
+						<p>
+							<span>
+								Задача 4 - Math.max выведет самое большее значение 58 .
+							</span>
+						</p>
+					</div>
+					<div class="numbers__option option">
+						<h3 class="option__title">
+							Задача №5
+						</h3>
+						<p>
+							let numOne = Math.floor(58.858);
+							console.log(numOne);
+						</p>
+						<p>
+							<span>
+								Задача 5 - Math.floor округлит значение до 58 .
+							</span>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="strings">
+				<div class="strings__container">
+					<h3 class="strings__title title">
+						Строки в JAVASCRIPT. Тип данных string. Типы кавычек, поиск, регистр и получение подстроки.
+					</h3>
+					<div class="strings__image">
+						<picture><source srcset="img/strings.webp" type="image/webp"><img src="img/strings.jpg" alt="Image"></picture>
+					</div>
+					<div class="strings__option option">
+						<h3 class="option__title">
+							Задача №1
+						</h3>
+						<p>
+							let fls = "Фрилансер"; <br>
+							let text = 'Привет! Я ${fls}'; <br>
+							console.log(text);
+						</p>
+						<p>
+							<span>
+								Задача 1 - запись не верна, так как необходимо 'Привет! Я ${fls}' обернуть в обратные кавычки `Привет! Я ${fls}`
+							</span>
+						</p>
+					</div>
+					<div class="strings__option option">
+						<h3 class="option__title">
+							Задача №2
+						</h3>
+						<p>
+							let text = 'Фрилансер'; <br>
+							let symbol = text[5]; <br>
+							console.log(symbol);
+						</p>
+						<p>
+							Задача 2 - [5] с помощью квадратных скобок и поочерёдного числа выводиться нужная буква н.
+						</p>
+					</div>
+					<div class="strings__option option">
+						<h3 class="option__title">
+							Задача №3
+						</h3>
+						<p>
+							let text = 123 + "456"; <br>
+							console.log(text);
+						</p>
+						<p>
+							<span>
+								Задача 3 - запись не верна, так как из за кавычек оператор сложения + выведет значение в одну строку, а не вычислит необходимое число.
+							</span>
+						</p>
+					</div>
+					<div class="strings__option option">
+						<h3 class="option__title">
+							Задача №4
+						</h3>
+						<p>
+							let text = 'фрилансер'; <br>
+							console.log(text.toLocaleUpperCase());
+						</p>
+						<p>
+							Задача 4 - значение toLocaleUpperCase() выводит строку в верхний регистр.
+						</p>
+					</div>
+					<div class="strings__option option">
+						<h3 class="option__title">
+							Задача №5
+						</h3>
+						<p>
+							let text = 'фрилансер'; <br>
+							console.log(text.slice(3, 6));
+						</p>
+						<p>
+							Задача 5 - значение slice() с определёнными числами выводит нужную часть строки в консоль.
+						</p>
+					</div>
+					<div class="strings__option option">
+						<h3 class="option__title">
+							Задача №6
+						</h3>
+						<p>
+							let text = 'фрилансер'; <br>
+							console.log(text.includes('лан', 4));
+						</p>
+						<p>
+							Задача 6 - получим значение false, так как счет значения необходимо начинать с 0 а не с 1.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20230104191326"></script>
+</body>
+
+</html>
